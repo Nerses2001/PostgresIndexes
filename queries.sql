@@ -32,3 +32,9 @@ explain
     select id, name
     from users_bigint
     where name = 'test1';
+
+explain
+    (analyse, costs  off ,buffers )
+    select id
+    from users_variant1
+    where state = 'PENDING';
